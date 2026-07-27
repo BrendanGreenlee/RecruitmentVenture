@@ -12,14 +12,21 @@
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
+  <!-- ===== Staging Banner ===== -->
+  <div class="staging-banner">
+    ⚠️ STAGING SITE — RecruitmentVenture-Staging
+  </div>
+
+  <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="container">
       <h1 class="logo">Syntropy Talent</h1>
       <nav class="nav">
-        <a href="../index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="job-seeker.html">Job Seeker</a>
-        <a href="../employer.html">Employer</a>
-        <a href="../contact.html">Contact</a>
+        <a href="employer.html">Employer</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -99,13 +106,6 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script>
-    // Form submission
-    document.getElementById('jobSeekerForm')?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Application submitted! (In production, this would send data to ERPNext)');
-      this.reset();
-    });
-  </script>
+  <script src="js/form-handler.js"></script>
 </body>
 </html>
