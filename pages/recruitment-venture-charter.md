@@ -11,7 +11,6 @@ Create and maintain a professional recruitment/temp agency website with separate
 - ERPNext integration for form submissions
 
 ## Success Criteria
-- Live staging and production sites accessible
 - Forms functional and submitting data to ERPNext
 - Mobile responsive design
 - Professional appearance with white/blue/gray palette
