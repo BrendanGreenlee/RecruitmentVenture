@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer Inquiry - Syntropy Talent</title>
+  <meta name="description" content="Learn about our recruitment services and submit your hiring needs">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- ===== Staging Banner ===== -->
+  <div class="staging-banner">
+    ⚠️ STAGING SITE — RecruitmentVenture-Staging
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Syntropy Talent</h1>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="job-seeker.html">Job Seeker</a>
+        <a href="employer.html">Employer</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container">
+    <div class="page-header">
+      <h2>Employer Inquiry</h2>
+      <p>Tell us about your hiring needs and we'll help you find the right talent</p>
+    </div>
+
+    <div class="form-container">
+      <div class="form-intro">
+        <h3>Looking to hire top talent?</h3>
+        <p>Submit your requirements and our team will reach out to discuss how we can help you find the perfect candidate.</p>
+      </div>
+
+      <!-- ERPNext Web Form or Standalone Form -->
+      <form id="employerForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-company">Company Name *</label>
+            <input type="text" id="emp-company" name="company_name" required>
+          </div>
+          <div class="form-group">
+            <label for="emp-contact">Contact Person *</label>
+            <input type="text" id="emp-contact" name="contact_name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-email">Email Address *</label>
+            <input type="email" id="emp-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="emp-phone">Phone Number *</label>
+            <input type="tel" id="emp-phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emp-positions">Positions to Fill</label>
+            <input type="number" id="emp-positions" name="positions" min="1" placeholder="Number of positions">
+          </div>
+          <div class="form-group">
+            <label for="emp-industry">Industry</label>
+            <select id="emp-industry" name="industry">
+              <option value="">Select an industry</option>
+              <option value="technology">Technology</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="retail">Retail</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="emp-notes">Hiring Requirements & Notes *</label>
+          <textarea id="emp-notes" name="notes" rows="6" required placeholder="Please describe the roles, qualifications, salary range, timeline, and any other relevant details..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Hiring Request</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Syntropy Talent. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Form handling for staging
+    document.getElementById('employerForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Hiring request submitted! (In production, this would send data to ERPNext)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Seeker Application - Syntropy Talent</title>
+  <meta name="description" content="Submit your profile to be considered for job opportunities">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- ===== Staging Banner ===== -->
+  <div class="staging-banner">
+    ⚠️ STAGING SITE — RecruitmentVenture-Staging
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Syntropy Talent</h1>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="job-seeker.html">Job Seeker</a>
+        <a href="../employer.html">Employer</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container">
+    <div class="page-header">
+      <h2>Job Seeker Application</h2>
+      <p>Submit your information to be considered for open positions</p>
+    </div>
+
+    <div class="form-container">
+      <div class="form-intro">
+        <h3>Looking for your next opportunity?</h3>
+        <p>Fill out the form below with your details and we'll get back to you with suitable opportunities.</p>
+      </div>
+
+      <!-- ERPNext Web Form Embed or Standalone Form -->
+      <form id="jobSeekerForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="js-name">Full Name *</label>
+            <input type="text" id="js-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="js-email">Email Address *</label>
+            <input type="email" id="js-email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="js-phone">Phone Number *</label>
+            <input type="tel" id="js-phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="js-industry">Industry Preference</label>
+            <select id="js-industry" name="industry">
+              <option value="">Select an industry</option>
+              <option value="technology">Technology</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="retail">Retail</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="js-experience">Experience Level</label>
+            <select id="js-experience" name="experience">
+              <option value="entry">Entry Level</option>
+              <option value="mid">Mid Level</option>
+              <option value="senior">Senior Level</option>
+              <option value="executive">Executive</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="js-resume">Resume/Portfolio URL</label>
+            <input type="url" id="js-resume" name="resume" placeholder="https://example.com/resume.pdf">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="js-notes">Additional Notes *</label>
+          <textarea id="js-notes" name="notes" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Syntropy Talent. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Form handling for staging
+    document.getElementById('jobSeekerForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Application submitted! (In production, this would send data to ERPNext)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
